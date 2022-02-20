@@ -7,7 +7,7 @@ let musciCard=document.querySelector(".musicCard")
 
 searchButton.addEventListener("click",async ()=>{
 
-    album=await document.querySelector("#input-song").ariaValueMax
+    album=await document.querySelector("#input-song").Value
     const data=await fetch(`https://itunes.apple.com/search?term=${album}&media=music&limit=25.`)
     const music=await data.json()
     const results=music.results
